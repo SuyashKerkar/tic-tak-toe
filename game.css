@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+  background-color: rgb(28, 27, 27);
+}
+
+.container{
+  /* border: 1px solid red; */
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .pre-container{
+  height: 500px;
+  width: 330px;
+  background: white;
+  border-radius: 15px;
+  /* display: none; */
+}
+
+.container .pre-container .player-turn{
+  height: 60px;
+  width: 300px;
+  background: #0e3055;
+  border-radius: 50px;
+  margin: auto;
+  margin-top: 30px;
+  overflow: hidden;
+}
+
+.container .pre-container .player-turn .turn{
+  height: 60px;
+  width: 150px;
+  float: left;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.container .pre-container .player-turn .turn-indicator{
+  height: 60px;
+  width: 150px;
+  background: #f8b31a;
+  border-radius: 50px;
+  position: absolute;
+  transition: all .4s;
+  /* margin-left: 150px; */
+}
+
+.container .pre-container .board{
+  height: 320px;
+  width: 280px;
+  /* border: 1px solid red; */
+  margin: auto;
+  margin-top: 45px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+}
+
+.container .pre-container .board .cell{
+  border-bottom: 4px solid #ebe9ec;
+  border-right: 4px solid #ebe9ec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #0e3055;
+  font-size: 55px;
+}  
+
+.container .pre-container .board .cell:nth-child(3n){
+  border-right: none;
+}
+
+.container .pre-container .board .cell:nth-child(n+7){
+  border-bottom: none;
+}
+
+.container .pre-container .board .cell .fa-o{
+  color: #f8b31a;
+}
+
+.container .result-box{
+  position: absolute;
+  height: 115px;
+  width: 300px;
+  padding: 20px;
+  background: white;
+  border-radius: 5px;
+  text-align: center;
+  display: none;
+
+}
+
+.container .result-box span{
+  color: black;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.container .result-box button{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  all: unset;
+  height: 40px;
+  width: 160px;
+  background-color: #0e3055;
+  color: white;
+  border-radius: 30px;
+  margin-top: 12px;
+  font-size: 14px;
+  cursor: pointer;
+
+}
